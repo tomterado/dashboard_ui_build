@@ -158,12 +158,15 @@ const ReferralSubText = styled.p`
     font-size: 1em;
     color:  ${theme.textGrey};
     line-height: 18px;
+    margin: 0px;
+    margin-top: 16px;
+    margin-bottom: 16px;
 `;
 
 const JoinButton = styled.button`
     margin-top: 16px;
     background-color:  ${theme.green2};
-    height: 50px;
+    height: 40px;
     width: 200px;
     border: 0px solid grey;
     border-radius: 4px;
