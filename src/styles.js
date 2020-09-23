@@ -165,6 +165,7 @@ const ReferralSubText = styled.p`
 
 const JoinButton = styled.button`
     margin-top: 8px;
+    margin-bottom: 16px;
     background-color:  ${theme.green2};
     height: 40px;
     width: 200px;
