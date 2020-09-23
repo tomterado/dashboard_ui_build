@@ -8,6 +8,7 @@ import {
     PlaceHolderImage,
     ReferalContainer,
     ReferralHeading,
+    MenuTitle,
     ReferralSubText,
     JoinButton
 } from "../styles"
@@ -26,7 +27,7 @@ function LeftCol() {
                     return(
                         <DivRow>
                             <PlaceHolderImage/>
-                            <h1> {ele}</h1>
+                            <MenuTitle> {ele}</MenuTitle>
                         </DivRow>
                     )
                 })}

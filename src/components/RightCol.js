@@ -11,6 +11,7 @@ import {
     DataContentOne,
     DataTitleOne,
     DataContentContainer,
+    MenuTitle,
     IndividSubmissionCard
 } from "../styles"
 import {
@@ -23,7 +24,7 @@ function RightCol() {
 
     const navContent = (
         <NavMenuContainer>
-            <h1>Lavendire</h1>
+            <MenuTitle>Lavendire</MenuTitle>
             <PlaceHolderImage/>
         </NavMenuContainer>
     )

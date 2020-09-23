@@ -108,7 +108,7 @@ const IndividSubmissionCard = styled.div`
     justify-content: center;
     flex-direction: column;
     text-align: center;
-    flex: 3
+    // flex: 3
    
     height: 300px;
     width: 15%;
@@ -132,6 +132,7 @@ const DivFlexWrap = styled.div`
     // align-items: center;
     flex-wrap: wrap;
     border: 4px dotted red;
+    justify-content: space-between;
 
 `;
 
@@ -158,7 +159,7 @@ const ReferralSubText = styled.p`
 `;
 
 const JoinButton = styled.button`
-    margin-top: 2em;
+    margin-top: 16px;
     background-color:  ${theme.green2};
     height: 50px;
     width: 200px;
@@ -199,6 +200,13 @@ const SubmissionsContet = styled.h1`
 `;
 
 
+const MenuTitle = styled.h1`
+    font-size: 1.5em;
+    color:  ${theme.black};
+    font-weight: 300;
+    line-height: 1.5em;
+`;
+
 
 
 // justify-content:
@@ -226,5 +234,6 @@ export {
     DataContentContainer,
     SubmissionsContet,
     DivFlexWrap,
-    IndividSubmissionCard
+    IndividSubmissionCard,
+    MenuTitle
 }
