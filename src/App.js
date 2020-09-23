@@ -1,25 +1,31 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import { MainContainer } from "./styles"
+import LeftCol from "./components/LeftCol"
+import RightCol from "./components/RightCol"
+
+/*
+  Building this out
+    1. Left Column
+      - Logo
+      - Navigation Titles / Menus
+      - Referral Box
+    2. Right Column
+      - Profile nNavigation
+      - Placeholder box for the content
+      - DummyData (JSON format) on the community contnet
+      - Filter
+    3. Icing on cake
+
+ */
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <MainContainer>
+      <LeftCol/>
+      <RightCol/>
+    </MainContainer>
   );
 }
 

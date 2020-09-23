@@ -2,32 +2,31 @@ import React from 'react';
 
 import styled from 'styled-components';
 
-// Create a <Title> react component that renders an <h1> which is
-// centered, palevioletred and sized at 1.5em
-const Title = styled.h1`
-  font-size: 1.5em;
-  text-align: center;
-  color: palevioletred;
-`;
-
-const LeftColContainer = styled.div`
-    display: flex;
-    height: 150vh;
-    backgroum
-  font-size: 1.5em;
-  text-align: center;
-  color: palevioletred;
-`;
+const palette = {
+    lightGrey: '#F5F6FA',
+    white: '#FFFFFF',
+    black: '#000000',
+    placeholder: '#EFEFEF',
+    grey: '#95A0AD',
+    thickGreen: '#3BB6B4',
+    midGreen: '#3BB6B4',
+    aquaLight: '#D3F3F4',
 
 
-/*const Title = styled.h1`
-  font-size: 1.5em;
-  text-align: center;
-  color: palevioletred;
-`;*/
+};
 
+const theme = {
+    lightGrey: palette.lightGrey,
+    white: palette.white,
+    black: palette.black,
+    textGrey: palette.grey,
+    placeholder: palette.placeholder,
+    green1: palette.thickGreen,
+    green2: palette.midGreen,
+    aqua: palette.aquaLight,
+};
 
 export {
-    Title,
-    LeftColContainer
+    palette,
+    theme,
 }
