@@ -110,7 +110,7 @@ const IndividSubmissionCard = styled.div`
     text-align: center;
     // flex: 3
    
-    height: 300px;
+    height: 200px;
     width: 15%;
     margin-right: 1em;
     border-radius: 12px;
@@ -131,7 +131,7 @@ const DivFlexWrap = styled.div`
     display: flex;
     // align-items: center;
     flex-wrap: wrap;
-    border: 4px dotted red;
+    // border: 4px dotted red;
     justify-content: space-between;
 
 `;
@@ -149,13 +149,15 @@ const ReferralHeading = styled.h1`
     font-size: 3em;
     color:  ${theme.black};
     font-weight: 600;
-    line-height: 1.5em;
+    margin: 0px;
+    margin-top: 1.5em;
+    // line-height: em;
 `;
 
 const ReferralSubText = styled.p`
     font-size: 1em;
     color:  ${theme.textGrey};
-    line-height: 1.5em;
+    line-height: 18px;
 `;
 
 const JoinButton = styled.button`
