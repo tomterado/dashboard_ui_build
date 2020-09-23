@@ -79,7 +79,7 @@ const ReferalContainer = styled.div`
     padding-right: 2em;
     padding-left: 2em;
     background-color:  ${theme.white};
-    height: 400px;
+    height: 350px;
     margin-bottom: 10em;
     border-radius: 16px;
 `;
@@ -146,7 +146,7 @@ const LogoTitle = styled.h1`
 `;
 
 const ReferralHeading = styled.h1`
-    font-size: 3em;
+    font-size: 2.5em;
     color:  ${theme.black};
     font-weight: 600;
     margin: 0px;
