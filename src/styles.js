@@ -14,7 +14,7 @@ const MainContainer = styled.div`
 
 const LeftColContainer = styled.div`
     display: flex;
-    flex: 3;
+    flex: 2;
     // height: 150vh;
     background-color: ${theme.lightGrey};
     padding-left: 4em;
@@ -27,39 +27,46 @@ const LeftColContainer = styled.div`
 const RightColContainer = styled.div`
     display: flex;
     flex-direction: column;
-    flex: 9;
+    flex: 10;
     // height: 150vh;
     padding-left: 4em;
     padding-right: 4em;
     // background-color: ${theme.aqua};
     background-color: ${theme.white};
-    border-top-left-radius:64px;
-    border-bottom-left-radius:64px;
+    border-top-left-radius:32px;
+    border-bottom-left-radius:32px;
 `;
 
 const DataContentContainer = styled.div`
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
+    overflow-x: scroll;
+    width: 100%;
 `;
+
+
+const TrendingImage = styled.img`
+    max-width: 100%;
+    max-height: 100%;
+    display: block
+`
 
 
 const DataContentOne = styled.div`
-    display: flex;
-    flex-direction: column;
+ 
+    // display: flex;
+    // flex-direction: column;
+    // margin-right: 15px,
     justify-content: center;
     align-items: center;
     text-align: center;
-    height: 250px;
-    width: 200px;
-    background-color: ${theme.green1};
-    border-radius: 32px;
+    // height: 200px;
+    width: 30%;
+    // background-color: ${theme.green1};
+    border-radius: 8px;
 `;
 
 const NavMenuContainer = styled.div`
-    margin-top: 2em;
-
+    margin-top: 4em;
     display: flex;
     justify-content: flex-end;
     align-items:center;
@@ -89,6 +96,7 @@ const ReferalContainer = styled.div`
 
 
 const LogoImage = styled.img`
+    margin-top: 3em;
     height: 43px;
     width: 59px;
     margin-right: 1em;
@@ -142,7 +150,15 @@ const DivFlexWrap = styled.div`
 const LogoTitle = styled.h1`
     font-size: 2em;
     color:  ${theme.black};
-    font-weight: 400;
+    font-weight: 600;
+`;
+
+const ChallengeDescription = styled.p`
+    font-size: 1em;
+    line-height: 24px;
+    color:  ${theme.textGrey};
+    // font-weight: 600;
+    margin-bottom: 2em;
 `;
 
 const ReferralHeading = styled.h1`
@@ -175,6 +191,14 @@ const JoinButton = styled.button`
 
 const ChallengeHeading = styled.h1`
     font-size: 2.5em;
+    color:  ${theme.green1};
+    font-weight: 600;
+    line-height: 1.5em;
+    text-decoration: underline;
+`;
+
+const TrendingHeading = styled.h1`
+    font-size: 1.5em;
     color:  ${theme.black};
     font-weight: 600;
     line-height: 1.5em;
@@ -208,8 +232,23 @@ const SubmissionsContet = styled.h1`
 
 const MenuTitle = styled.h1`
     font-size: 1.5em;
+    color:  ${theme.green2};
+    font-weight: 500;
+    line-height: 1.5em;
+`;
+
+const ChannelSubMenuHeading = styled.p`
+    font-size: 1em;
     color:  ${theme.black};
-    font-weight: 300;
+    font-weight: 500;
+    line-height: 1.5em;
+`;
+
+const ChannelChallengeTitle = styled.h1`
+    margin-toP: 1em;
+    font-size: 2.0em;
+    color:  ${theme.green2};
+    font-weight: 500;
     line-height: 1.5em;
 `;
 
@@ -229,8 +268,8 @@ export {
     MenuContainer,
     PlaceHolderImage,
     ReferalContainer,
-    ReferralHeading,
-    ReferralSubText,
+    ChallengeDescription,
+    TrendingHeading,
     JoinButton,
     NavMenuContainer,
     ChallengeHeading,
@@ -241,5 +280,8 @@ export {
     SubmissionsContet,
     DivFlexWrap,
     IndividSubmissionCard,
-    MenuTitle
+    MenuTitle,
+    ChannelChallengeTitle,
+    ChannelSubMenuHeading,
+    TrendingImage
 }

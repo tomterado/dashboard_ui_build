@@ -7,66 +7,73 @@ import {
     MenuContainer,
     PlaceHolderImage,
     ReferalContainer,
-    ReferralHeading,
+    ChannelSubMenuHeading,
     MenuTitle,
-    ReferralSubText,
+    ChannelChallengeTitle,
     JoinButton
 } from "../styles"
 import {
     menuItems,
-    shortPara
+    channelItems
 } from "../globals"
 
 
 function LeftCol() {
 
-    const divMenu = () => {
+    const divMenu = (channel) => {
+        if(channel){
+            return(
+                <div>
+                    {menuItems.map((ele, ind) => {
+                        return(
+                            <DivRow>
+                                <ChannelSubMenuHeading> {ele}</ChannelSubMenuHeading>
+                            </DivRow>
+                        )
+                    })}
+                </div>
+            )}
         return(
             <div>
-                {menuItems.map((ele, ind) => {
+                {channelItems.map((ele, ind) => {
                     return(
                         <DivRow>
-                            <PlaceHolderImage/>
-                            <MenuTitle> {ele}</MenuTitle>
+                            <ChannelSubMenuHeading> {ele}</ChannelSubMenuHeading>
                         </DivRow>
                     )
                 })}
             </div>
-            )
-    }
+        )
+        }
+
+
+    const referContent = (
+        <DivRow>
+            <PlaceHolderImage/>
+            <MenuTitle>Refer a Friend</MenuTitle>
+        </DivRow>
+    )
 
     const logoMenuContent = (
         <div>
-            <DivRow style={{marginTop: "2em"}}>
-                <LogoImage src={require("../assets/vibes.png")}/>
-                <LogoTitle>Vibely</LogoTitle>
-            </DivRow>
+            <LogoImage src={require("../assets/vibes.png")}/>
+            <LogoTitle>Lavendire</LogoTitle>
 
             <MenuContainer>
-                {divMenu()}
+                {referContent}
+                <ChannelChallengeTitle>Challenges ✨</ChannelChallengeTitle>
+                {divMenu(true)}
+                <ChannelChallengeTitle>Channels 📺</ChannelChallengeTitle>
+                {divMenu(false)}
+
+
             </MenuContainer>
         </div>
     )
 
-
-    const referContent = (
-        <ReferalContainer>
-            <ReferralHeading> Join us.</ReferralHeading>
-            <ReferralSubText>
-                {shortPara}
-            </ReferralSubText>
-
-            <JoinButton>
-
-            </JoinButton>
-        </ReferalContainer>
-    )
-
-
     return (
         <LeftColContainer>
             {logoMenuContent}
-            {referContent}
         </LeftColContainer>
     );
 }

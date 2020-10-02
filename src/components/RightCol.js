@@ -5,18 +5,19 @@ import {
     DivFlexWrap,
     SubmissionsContet,
     DatTitleDescrip,
-    PlaceHolderImage,
+    TrendingHeading,
     NavMenuContainer,
     ChallengeHeading,
     DataContentOne,
     DataTitleOne,
     DataContentContainer,
-    MenuTitle,
-    IndividSubmissionCard
+    ChallengeDescription,
+    IndividSubmissionCard,
+    TrendingImage
 } from "../styles"
 import {
     dummyData,
-    shortPara
+    descriptionPara
 } from "../globals"
 
 
@@ -24,34 +25,40 @@ function RightCol() {
 
     const navContent = (
         <NavMenuContainer>
-            <MenuTitle>Lavendire</MenuTitle>
-            <PlaceHolderImage/>
+            {/*<MenuTitle>Lavendire</MenuTitle>*/}
         </NavMenuContainer>
+    )
+
+    const descriptionContent = (
+        <ChallengeDescription>{descriptionPara}</ChallengeDescription>
     )
 
 
     const challengeContent = (
         <DivRow>
-            <ChallengeHeading>#goalfriends Challenge</ChallengeHeading>
-            <PlaceHolderImage/>
+            <ChallengeHeading>Goal Friends</ChallengeHeading>
+        </DivRow>
+    )
+
+    const trendingContent = (
+        <DivRow>
+            <TrendingHeading>Trending</TrendingHeading>
         </DivRow>
     )
 
     const dataContent = (
         <DataContentContainer>
+
             <DataContentOne>
-                <DatTitleDescrip>Submitted</DatTitleDescrip>
-                <DataTitleOne>238</DataTitleOne>
+                <TrendingImage src={require("../assets/dpog_image.png")}/>
             </DataContentOne>
 
             <DataContentOne>
-                <DatTitleDescrip>Submitted</DatTitleDescrip>
-                <DataTitleOne>238</DataTitleOne>
+                <TrendingImage src={require("../assets/book_image.png")}/>
             </DataContentOne>
 
             <DataContentOne>
-                <DatTitleDescrip>Submitted</DatTitleDescrip>
-                <DataTitleOne>238</DataTitleOne>
+                <TrendingImage src={require("../assets/dpog_image.png")}/>
             </DataContentOne>
 
         </DataContentContainer>
@@ -88,17 +95,16 @@ function RightCol() {
                         </IndividSubmissionCard>
                     )
                 })}
-
-
             </DivFlexWrap>
         </>
-
     )
 
     return (
         <RightColContainer>
             {navContent}
             {challengeContent}
+            {descriptionContent}
+            {trendingContent}
             {dataContent}
             {submissionsContent}
 
